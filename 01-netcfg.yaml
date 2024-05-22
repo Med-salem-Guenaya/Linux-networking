@@ -1,0 +1,18 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: true
+      routes:
+       - to: default
+         via: 10.0.0.2/24
+    enp0s8:
+      dhcp4: no
+      addresses:
+        - 192.168.56.101/24
+      routes:
+       - to: 192.168.56.1/24
+         via: 192.168.56.100
+      #nameservers:
+          #addresses: [8.8.8.8, 8.8.4.4]
