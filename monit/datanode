@@ -1,0 +1,4 @@
+check process confignode with pidfile /home/user/datanode.pid
+    start program = "/home/user/datanode.sh start" 
+    stop program  = "/home/user/datanode.sh stop"
+    if not exist then restart

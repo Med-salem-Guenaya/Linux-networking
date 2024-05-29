@@ -1,0 +1,6 @@
+check process prometheus 
+#with pidfile /usr/local/bin/prometheus.bin
+    matching "prometheus"
+    start program = " /usr/bin/systemctl start prometheus.service " 
+    stop program  = " /usr/bin/systemctl stop prometheus.service "
+    if not exist then restart

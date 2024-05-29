@@ -1,0 +1,4 @@
+check process confignode with pidfile /home/user/confignode.pid
+    start program = "/home/user/confignode.sh start" 
+    stop program  = "/home/user/confignode.sh stop"
+    if not exist then restart
