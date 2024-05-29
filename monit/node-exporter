@@ -1,0 +1,5 @@
+check process node_exporter 
+    matching "node_exporter"
+    start program = " /usr/bin/systemctl start node_exporter.service " 
+    stop program  = " /usr/bin/systemctl stop node_exporter.service "
+    if not exist then restart

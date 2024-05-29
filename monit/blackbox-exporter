@@ -1,0 +1,5 @@
+check process blackbox_export 
+    matching "blackbox_export"
+    start program = " /usr/bin/systemctl start blackbox_exporter.service " 
+    stop program  = " /usr/bin/systemctl stop blackbox_exporter.service "
+    if not exist then restart
