@@ -8,7 +8,7 @@
      stop)
        #kill $(cat confignode.pid);
        bash /home/user/apache-iotdb-1.3.0-confignode-bin/sbin/stop-confignode.sh
-       rm confignode.pid
+       rm /home/user/confignode.pid
        ;;
      *)
        echo "usage: confignode.sh {start|stop}" ;;

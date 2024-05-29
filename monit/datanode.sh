@@ -8,7 +8,7 @@
      stop)
        #kill $(cat confignode.pid);
        bash /home/user/apache-iotdb-1.3.0-server-bin/sbin/stop-datanode.sh
-       rm datanode.pid
+       rm /home/user/datanode.pid
        ;;
      *)
        echo "usage: confignode.sh {start|stop}" ;;
