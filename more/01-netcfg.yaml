@@ -1,0 +1,19 @@
+# add to /etc/netplan/
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+   # enp0s3:
+   #   dhcp4: true
+   #   routes:
+   #    - to: default
+   #      via: 10.0.0.2/24
+    ens18:
+      dhcp4: no
+      addresses:
+        - 10.110.10.204/23
+      routes:
+       - to: default
+         via: 10.110.10.1
+      #nameservers:
+          #addresses: [8.8.8.8, 8.8.4.4]

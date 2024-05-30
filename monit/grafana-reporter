@@ -1,0 +1,5 @@
+check process grafana-reporte 
+    matching "grafana-reporte"
+    start program = " /usr/bin/systemctl start grafana_reporter.service " 
+    stop program  = " /usr/bin/systemctl stop grafana_reporter.service "
+    if not exist then restart
